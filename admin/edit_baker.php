@@ -95,17 +95,17 @@ if (isset($_POST["update"])) {
                         <div class="mt-3">
                             <label for="name" class="form-label">Name</label>
                             <input type="text" name="name" id="name" class="form-control"
-                                value="<?php echo $baker['name']; ?>">
+                                value="<?php echo $baker['name']; ?>" required>
                         </div>
                         <div class="mt-3">
                             <label for="position" class="form-label">Position</label>
                             <input type="text" name="position" id="position" class="form-control"
-                                value="<?php echo $baker['position']; ?>">
+                                value="<?php echo $baker['position']; ?>" required>
                         </div>
                         <div class="mt-3">
                             <label for="note" class="form-label">Baker's note</label>
                             <input type="text" name="note" id="note" class="form-control"
-                                value="<?php echo $baker['note'] ?>">
+                                value="<?php echo $baker['note'] ?>" required>
                         </div>
                         <div class="mt-3">
                             <label for="" class="form-label">Image</label>

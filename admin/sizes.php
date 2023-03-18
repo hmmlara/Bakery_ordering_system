@@ -49,7 +49,7 @@ if(isset($_POST['add_size'])){
                         <h1 class="h3 mb-0 text-gray-800">Sizes</h1>
 
                     </div>
-                    
+
                     <div class="row">
                         <table class="table table-striped" id="size_table" style="width:1250px !important">
                             <thead>
@@ -77,11 +77,11 @@ if(isset($_POST['add_size'])){
                                                                 <label for="recipient-name" class="col-form-label">Enter
                                                                     Size in inch:</label>
                                                                 <input type="text" class="form-control"
-                                                                    id="recipient-name" name="size">
+                                                                    id="recipient-name" name="size" required>
                                                                 <label for="recipient-name" class="col-form-label">Fix
                                                                     price:</label>
-                                                                <input type="text" class="form-control"
-                                                                    id="recipient-name" name="size_price">
+                                                                <input type="number" class="form-control"
+                                                                    id="recipient-name" name="size_price" required>
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-outline-secondary"
@@ -120,7 +120,7 @@ if(isset($_POST['add_size'])){
 
     </div>
     <!-- End of Main Content -->
-    
+
     <?php
     include_once 'layout/footer.php';
     ?>

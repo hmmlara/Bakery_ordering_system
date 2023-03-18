@@ -43,7 +43,7 @@ ob_start();
                                                 </div>
                                                 <div class="col-md-8">
                                                     <label class="form-label">
-                                                    <?php    
+                                                        <?php    
                                                     echo $result[0]['name'];
                                                     ?>
                                                     </label>
@@ -67,20 +67,20 @@ ob_start();
                                         </div> -->
 
                                         <div class="form-group">
-                                        <div class="row">
+                                            <div class="row">
                                                 <div class="col-md-4">
                                                     <label class="form-label">Phone -- </label>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <label class="form-label">
-                                                    <?php    
+                                                        <?php    
                                                     echo $result[0]['phone'];
                                                     ?>
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="form-group">
                                             <div class="row">
                                                 <div class="col-md-4">
@@ -88,7 +88,7 @@ ob_start();
                                                 </div>
                                                 <div class="col-md-8">
                                                     <label class="form-label">
-                                                    <?php    
+                                                        <?php    
                                                     echo $result[0]['address'];
                                                     ?>
                                                     </label>
@@ -103,7 +103,7 @@ ob_start();
                                                 </div>
                                                 <div class="col-md-8">
                                                     <label class="form-label">
-                                                    <?php    
+                                                        <?php    
                                                     echo $result[0]['email'];
                                                     ?>
                                                     </label>
@@ -113,19 +113,21 @@ ob_start();
                                         <div>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <a href="user_logout.php" name="signup" class="btn btn-dark mt-3">Sign Out</a>
+                                                    <a href="user_logout.php" name="signup"
+                                                        class="btn btn-dark mt-3">Sign Out</a>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <a href="history.php" name="signup" class="btn btn-dark mt-3">History</a>
+                                                    <a href="history.php" name="signup"
+                                                        class="btn btn-dark mt-3">History</a>
                                                 </div>
                                             </div>
                                         </div>
-                                            
-                                            <!-- <button type="submit" name="login" class="btn btn-warning mt-3">Login</button> -->
-      
+
+                                        <!-- <button type="submit" name="login" class="btn btn-warning mt-3">Login</button> -->
+
                                         <hr>
                                     </form>
-                                    
+
                                 </div>
                             </div>
                         </div>

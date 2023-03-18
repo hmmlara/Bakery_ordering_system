@@ -60,27 +60,27 @@ if (isset($_POST['update'])) {
                         <div class="mt-3">
                             <label for="name" class="form-label">Name</label>
                             <input type="text" name="name" id="name" class="form-control"
-                                value="<?php echo $cream['name']; ?>">
+                                value="<?php echo $cream['name']; ?> required">
                         </div>
                         <div class="mt-3">
                             <label for="color" class="form-label">Color</label>
                             <input type="text" name="color" id="color" class="form-control"
-                                value="<?php echo $cream['color']; ?>">
+                                value="<?php echo $cream['color']; ?>" required>
                         </div>
                         <div class="mt-3">
                             <label for="scent" class="form-label">Scent</label>
                             <input type="text" name="scent" id="scent" class="form-control"
-                                value="<?php echo $cream['scent'] ?>">
+                                value="<?php echo $cream['scent'] ?>" required>
                         </div>
                         <div class="mt-3">
                             <label for="taste" class="form-label">Taste</label>
                             <input type="text" name="taste" id="taste" class="form-control"
-                                value="<?php echo $cream['taste'] ?>">
+                                value="<?php echo $cream['taste'] ?>" required>
                         </div>
                         <div class="mt-3">
                             <label for="price" class="form-label">Price</label>
-                            <input type="text" name="price" id="price" class="form-control"
-                                value="<?php echo $cream['price'] ?>">
+                            <input type="number" name="price" id="price" class="form-control"
+                                value="<?php echo $cream['price'] ?>" required>
                         </div>
                         <div class="mt-3">
                             <button class="btn btn-primary" type="submit" name="update">Update</button>

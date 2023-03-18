@@ -62,9 +62,9 @@ if(count($_SESSION['auth_user']) > 0){
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -98,10 +98,10 @@ if(count($_SESSION['auth_user']) > 0){
                 <img src="img/icon/heart.png" alt="">
             </div>
 
-            <div class="offcanvas__cart__item">
-                <a href="shopping-cart.php"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
+            <!-- <div class="offcanvas__cart__item">
+                <a href="shopping-cart.php">Shopping Card<img src="img/icon/cart.png" alt=""> <span>0</span></a>
                 <div class="cart__price">Cart: <span>$0.00</span></div>
-            </div>
+            </div> -->
         </div>
 
         <div class="offcanvas__logo">
@@ -136,16 +136,40 @@ if(count($_SESSION['auth_user']) > 0){
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="header__top__inner">
-                             <div class="header__top__left">
+                            <div class="header__top__left">
                                 <ul>
-                                 
-                                    <li><a href="user_login_form.php">SignIn</a> <span class="arrow_carrot-down"></span>
+
+                                    <?php
+                                if(isset($_SESSION['customer']))
+                                { ?>
+                                    <li><a href="user_logout.php">Log out</a> <span class="arrow_carrot-down"></span>
+
                                         <ul>
-                                            <li><a href="user_login_form.php">SignIn</a> <span class="arrow_carrot-down"></span></li>
-                                            <li><a href="user_signup_form.php">SignUp</a> <span class="arrow_carrot-down"></span></li>
-                                            <li><a href="user_logout.php">SignOut</a> <span class="arrow_carrot-down"></span></li>
+
                                         </ul>
                                     </li>
+
+                                    <?php
+                                    }
+                                ?>
+
+
+
+                                    <?php
+                                if(!isset($_SESSION['customer']))
+                                { ?>
+                                    <li><a href="user_login_form.php">SignIn</a> <span class="arrow_carrot-down"></span>
+
+                                        <ul>
+
+                                            <li><a href="user_signup_form.php">SignUp</a> </li>
+
+                                        </ul>
+                                    </li>
+
+                                    <?php
+                                    }
+                                ?>
 
                                     <?php
                                     if(isset($_SESSION['customer'])) 
@@ -157,7 +181,7 @@ if(count($_SESSION['auth_user']) > 0){
                                     }
                                     ?>
 
-                                </ul> 
+                                </ul>
                             </div>
                             <div class="header__logo">
                                 <a href="./index.php"><img src="img/logo.png" alt=""></a>
@@ -168,9 +192,11 @@ if(count($_SESSION['auth_user']) > 0){
                                     <a href="#"><img src="img/icon/heart.png" alt=""></a>
                                 </div> -->
                                 <div class="header__top__right__cart">
+                                    <a href="shoping-cart.php" class="text-secondary">Shopping Cart</a>
+
                                     <a href="shoping-cart.php"><img src="img/icon/cart.png" alt="">
                                         <span>
-                                            
+
                                             <?php
                                                 echo "<pre>";
                                                 echo count($_SESSION["cart"]);
@@ -181,7 +207,7 @@ if(count($_SESSION['auth_user']) > 0){
                                     </a>
                                     <!-- <div class="cart__price">Cart: <span>$0.00</span></div> -->
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -189,7 +215,7 @@ if(count($_SESSION['auth_user']) > 0){
                 <div class="canvas__open"><i class="fa fa-bars"></i></div>
             </div>
         </div>
-        
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -199,14 +225,21 @@ if(count($_SESSION['auth_user']) > 0){
                         //    var_dump($active);
                         ?>
                         <ul>
-                            <li class="<?php  echo ($active == '/bakery_online_store/index.php')? 'active':''; ?>"><a href="./index.php">Home</a></li>
-                            <li class="<?php echo ($active == '/bakery_online_store/about.php')? 'active':''; ?>"><a href='./about.php'>About</a></li>
-                            <li class="<?php echo ($active == '/bakery_online_store/shop.php' ? 'active' :'') ?>"><a href="./shop.php">Shop</a></li>
-                            <li class="<?php echo ($active == '/bakery_online_store/customize.php' ? 'active' :'') ?>"><a href="./customize.php">Customize</a></li>
-                            <!-- <li class="<?php echo ($active == '/bakery_online_store/shop-detials.php'?'active':'') ?>"><a href="./shop-details.php">Shop Details</a></li> -->
-                            <li class="<?php  echo($active == '/bakery_online_store/shoping-cart.php'?'active':'')  ?>"><a href="./shoping-cart.php">Shoping Cart</a></li>
-                            <li class="<?php echo($active == '/bakery_online_store/contact.php')?'active':''  ?>"><a href="./contact.php">Contact</a></li>
-                            
+                            <li class="<?php  echo ($active == '/bakery_online_store/index.php')? 'active':''; ?>"><a
+                                    href="./index.php">Home</a></li>
+                            <li class="<?php echo ($active == '/bakery_online_store/about.php')? 'active':''; ?>"><a
+                                    href='./about.php'>About</a></li>
+                            <li class="<?php echo ($active == '/bakery_online_store/shop.php' ? 'active' :'') ?>"><a
+                                    href="./shop.php">Shop</a></li>
+                            <li class="<?php echo ($active == '/bakery_online_store/customize.php' ? 'active' :'') ?>">
+                                <a href="./customize.php">Customize</a>
+                            </li>
+                            <!-- <li class="<?php  echo($active == '/bakery_online_store/shoping-cart.php'?'active':'')  ?>">
+                                <a href="./shoping-cart.php">Shoping Cart</a>
+                            </li> -->
+                            <li class="<?php echo($active == '/bakery_online_store/contact.php')?'active':''  ?>"><a
+                                    href="./contact.php">Contact</a></li>
+
                         </ul>
                     </nav>
                 </div>

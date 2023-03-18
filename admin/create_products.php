@@ -76,48 +76,48 @@ else{
 }
 ?>
 
-   <!-- Page Heading -->
-                   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-600 ml-4">Add Products</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-light shadow-sm"><i
-                                class="fas fa-download fa-sm text-light-50"></i> Generate Report</a>
-                    </div>
-                   
-            <div class="container">
-            <div>
-                    <a  href="products.php" class="btn btn-outline-secondary">Back</a>
-                   </div>
-                 <form action="" method="post" enctype="multipart/form-data" >
-                        <div class="col-md-8">
-                            <label for="" class="form-label">Categories Name</label>
-                            <select name="category_id" id="" class="form-control">
-                                <?php
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-600 ml-4">Add Products</h1>
+    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-light shadow-sm"><i
+            class="fas fa-download fa-sm text-light-50"></i> Generate Report</a>
+</div>
+
+<div class="container">
+    <div>
+        <a href="products.php" class="btn btn-outline-secondary">Back</a>
+    </div>
+    <form action="" method="post" enctype="multipart/form-data">
+        <div class="col-md-8">
+            <label for="" class="form-label">Categories Name</label>
+            <select name="category_id" id="" class="form-control" required>
+                <?php
                                    for($index=0;$index<count($categorires);$index++)
                                    {
                                     echo "<option value='".$categorires[$index]['id']."'>".$categorires[$index]['name']."</option>";
                                    }
                                 ?>
-                            </select>
+            </select>
 
-                            <label for="" class="form-label">Name</label>
-                            <input type="text" name="name" id="" class="form-control">
-                            
-                            <label for="" class="form-label">Image</label>
-                            <input type="file" name="photo" id="photo" class="form-control">
+            <label for="" class="form-label">Name</label>
+            <input type="text" name="name" id="" class="form-control" required>
 
-                            <label for="" class="form-label">Price</label>
-                            <input type="text" name="price" id="" class="form-control">
+            <label for="" class="form-label">Image</label>
+            <input type="file" name="photo" id="photo" class="form-control" required>
 
-                            <label for="" class="form-label">Description</label>
-                            <input type="text" name="description" id="" class="form-control">
-                             
-                            <div>
-                                <button type="submit" class="btn btn-outline-success mb-3 mt-3" name="add">Add</button>
-                            </div>
-                        </div>
+            <label for="" class="form-label">Price</label>
+            <input type="number" name="price" id="" class="form-control" required>
 
-                    </form>
+            <label for="" class="form-label">Description</label>
+            <input type="text" name="description" id="" class="form-control" required>
+
+            <div>
+                <button type="submit" class="btn btn-outline-success mb-3 mt-3" name="add">Add</button>
             </div>
+        </div>
+
+    </form>
+</div>
 <?php
  include_once "layout/footer.php";
 ?>

@@ -50,12 +50,12 @@ if (isset($_POST['update'])) {
                         <div class="mt-3">
                             <label for="size" class="form-label">Size</label>
                             <input type="text" name="size" id="size" class="form-control"
-                                value="<?php echo $size['size']; ?>">
+                                value="<?php echo $size['size']; ?>" required>
                         </div>
                         <div class="mt-3">
                             <label for="price" class="form-label">Price</label>
-                            <input type="text" name="price" id="price" class="form-control"
-                                value="<?php echo $size['price']; ?>">
+                            <input type="number" name="price" id="price" class="form-control"
+                                value="<?php echo $size['price']; ?>" required>
                         </div>
                         <div class="mt-3">
                             <button class="btn btn-primary" type="submit" name="update">Update</button>

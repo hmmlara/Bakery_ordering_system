@@ -89,21 +89,21 @@ if (isset($_POST["add"])) {
                         <div class="mt-3">
                             <label for="name" class="form-label">Name</label>
                             <input type="text" name="name" id="name" class="form-control"
-                                placeholder="Enter baker's full name">
+                                placeholder="Enter baker's full name" required>
                         </div>
                         <div class="mt-3">
                             <label for="position" class="form-label">Position</label>
                             <input type="text" name="position" id="position" class="form-control"
-                                placeholder="Enter baker's position">
+                                placeholder="Enter baker's position" required>
                         </div>
                         <div class="mt-3">
                             <label for="note" class="form-label">Note</label>
                             <input type="text" name="note" id="position" class="form-control"
-                                placeholder="Enter baker's note">
+                                placeholder="Enter baker's note" required>
                         </div>
                         <div class="mt-3">
                             <label for="photo" class="form-label">Image</label>
-                            <input type="file" name="photo" id="photo" class="form-control">
+                            <input type="file" name="photo" id="photo" class="form-control" required>
                         </div>
                         <div class="mt-3">
                             <button class="btn btn-primary" type="submit" name="add">Add</button>

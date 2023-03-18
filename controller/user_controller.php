@@ -45,5 +45,17 @@
         return $result;
        }
 
+       public function updateProfile($id,$name,$phone,$address,$email)
+       {
+        $result=parent::updateProfile($id,$name,$phone,$address,$email);
+        return $result;
+       }
+
+       public function getUserForUpdate($id)
+       {
+        $result=parent::getUserForUpdate($id);
+        return $result;
+       }
+
     }
 ?>

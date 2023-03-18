@@ -49,12 +49,12 @@ if (isset($_POST['update'])) {
                         <div class="mt-3">
                             <label for="type" class="form-label">Toy Name</label>
                             <input type="text" name="type" id="type" class="form-control"
-                                value="<?php echo $doll['type']; ?>">
+                                value="<?php echo $doll['type']; ?>" required>
                         </div>
                         <div class="mt-3">
                             <label for="price" class="form-label">Price</label>
-                            <input type="text" name="price" id="price" class="form-control"
-                                value="<?php echo $doll['price']; ?>">
+                            <input type="number" name="price" id="price" class="form-control"
+                                value="<?php echo $doll['price']; ?>" required>
                         </div>
                         <div class="mt-3">
                             <button class="btn btn-primary" type="submit" name="update">Update</button>

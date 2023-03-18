@@ -67,22 +67,20 @@ if (isset($_POST['add'])) {
                         <div class="mt-3">
                             <label for="name" class="form-label">Promotion Name</label>
                             <input type="text" name="name" id="name" class="form-control"
-                                placeholder="Enter promotion name">
+                                placeholder="Enter promotion name" required>
                         </div>
                         <div class="mt-3">
                             <label for="percentage" class="form-label">Discount in percentage</label>
-                            <input type="text" name="percentage" id="percentage" class="form-control"
-                                placeholder="Enter discount in percentage">
+                            <input type="number" name="percentage" id="percentage" class="form-control"
+                                placeholder="Enter discount in percentage" required>
                         </div>
                         <div class="mt-3">
                             <label for="start_date" class="form-label">Promotion start date</label>
-                            <input type="date" name="start_date" id="start_date" class="form-control"
-                                placeholder="Enter promotion start date (YY-MM-DD)[eg; 23-01-01]">
+                            <input type="date" name="start_date" id="start_date" class="form-control" required>
                         </div>
                         <div class="mt-3">
                             <label for="end_date" class="form-label">Promotion end date</label>
-                            <input type="date" name="end_date" id="end_date" class="form-control"
-                                placeholder="Enter promotion end date (YY-MM-DD)[eg; 23-01-01]">
+                            <input type="date" name="end_date" id="end_date" class="form-control" required>
                         </div>
                         <div class="mt-3">
                             <button class="btn btn-primary" type="submit" name="add">Add</button>

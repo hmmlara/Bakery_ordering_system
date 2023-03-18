@@ -12,39 +12,39 @@
 
    //var_dump ($get_categories);
 ?>
-    <!-- Breadcrumb Begin -->
-    <div class="breadcrumb-option">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="breadcrumb__text">
-                        <h2>Shop</h2>
-                    </div>
+<!-- Breadcrumb Begin -->
+<div class="breadcrumb-option">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="breadcrumb__text">
+                    <h2>Shop</h2>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="breadcrumb__links">
-                            <a href="./index.php">Home</a>
-                            <span>  Shop </span>
-                            
-                    </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="breadcrumb__links">
+                    <a href="./index.php">Home</a>
+                    <span> Shop </span>
+
                 </div>
             </div>
         </div>
     </div>
-    <!-- Breadcrumb End -->
+</div>
+<!-- Breadcrumb End -->
 
-    <!-- Shop Section Begin -->
-    <section class="shop spad">
-        <div class="container">
-            <div class="shop__option">
-                <div class="row">
-                    <div class="col-lg-9 col-md-9">
-                        <div class="shop__option__search">
-                        
-                            <form action="Insertcart.php" method="post">
-                                <select class="form-select" id='fetchval'>
-                                    <option value="0">All</option>
-                                   <?php
+<!-- Shop Section Begin -->
+<section class="shop spad">
+    <div class="container">
+        <div class="shop__option">
+            <div class="row">
+                <div class="col-lg-9 col-md-9">
+                    <div class="shop__option__search">
+
+                        <form action="Insertcart.php" method="post">
+                            <select class="form-select" id='fetchval'>
+                                <option value="0">All</option>
+                                <?php
                                    
                                       for($index=0;$index<count($get_categories);$index++)
                                       {
@@ -57,18 +57,20 @@
 
                                     //   .$get_categories[$index]['name'].
                                     ?>
-                                </select>
-                                <input type="" placeholder="                            Making your life sweeter one bite at a time!               " style="cursor:pointer;caret-color:transparent" >
-                                <!-- <button type="submit"></button> -->
-                            </form>
-                        </div>
-
+                            </select>
+                            <input type=""
+                                placeholder="                            Making your life sweeter one bite at a time!               "
+                                style="cursor:pointer;caret-color:transparent">
+                            <!-- <button type="submit"></button> -->
+                        </form>
                     </div>
+
                 </div>
             </div>
+        </div>
 
-     <div class="row" id="filter_row">
-             
+        <div class="row" id="filter_row">
+
             <?php  
                 for($index=0;$index<count($products);$index++)
                 {
@@ -95,11 +97,12 @@
                         // echo "<button href='#'>Add to cart</a>";
                         ?>
 
-                        <div>
-                        <button type='submit' class='btn w-50' name='addCart' style="background-color:#f08632" >Add to cart</button>
+            <div>
+                <button type='submit' class='btn w-50' name='addCart' style="background-color:#f08632">Add to
+                    cart</button>
 
-                        </div>
-                        <?php
+            </div>
+            <?php
                         
                         //echo "</div>";
                         echo "</div>";//5
@@ -112,10 +115,10 @@
                 }
              
              ?>
-     </div>
+        </div>
 
         <!-- End CupCake -->
-            <!-- <div class="shop__last__option">
+        <!-- <div class="shop__last__option">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="shop__pagination">
@@ -132,16 +135,16 @@
                     </div>
                 </div>
             </div> -->
-        </div>
-    </section>
-    <!-- Shop Section End -->
+    </div>
+</section>
+<!-- Shop Section End -->
 
 
-    <script src="js/bootstrap.bundle.min.js"></script> 
-    
-    <script>
-        let addtocart=document.querySelectorAll('.cart');
-    </script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script>
+let addtocart = document.querySelectorAll('.cart');
+</script>
 <?php
    include_once "layout/footer.php";
 ?>

@@ -30,7 +30,7 @@ $bakers = $bakerController->getAllBakers();
 
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                 <h1 class="h3 mb-0 text-gray-600">Bakers</h1>
-            </div>   
+            </div>
             <div class="row">
                 <div class="col-md-6">
                     <a href="create_baker.php" class="btn btn-primary mb-3">Add new baker</a>
@@ -52,10 +52,10 @@ $bakers = $bakerController->getAllBakers();
                         </tr>
                     </thead>
                     <tbody id="delete_baker">
-                    <?php
+                        <?php
                     for ($row = 0; $row < count($bakers); $row++) {
                         echo "<tr>";
-                        echo "<td>". 1+$row ."</td>";
+                        echo "<td>". ($row + 1) ."</td>";
                         echo "<td><img src='uploads/".$bakers[$row]["image"]."' height='50px' width='50px'></td>";
                         echo "<td>" . $bakers[$row]["name"] . "</td>";
                         echo "<td>" . $bakers[$row]["position"] . "</td>";

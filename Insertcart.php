@@ -1,4 +1,3 @@
-
 <?php
 ob_start();
 
@@ -18,16 +17,20 @@ if(isset($_POST['addCart']))
     $check_product=array_column($_SESSION['cart'],'productName');
     if(in_array($product_name,$check_product))
     {
-        header('location:shop.php');
+       header('location:shop.php');
     }
-    else{
+    
+    else
+    {
+        
+
 
         $_SESSION['cart'][]=array('productId' => $product_id ,
                             'productName' => $product_name,
                             'productPrice' => $product_price,
                             'productQty' => $product_quantity);
                             
-    var_dump($_SESSION['cart']);
+    //var_dump($_SESSION['cart']);
         header("location:shop.php");
 
     }
@@ -84,4 +87,7 @@ if(isset($_POST['addCart']))
 // echo "<pre>";
 // var_dump( $_SESSION['cart']);
 // echo "</pre>";
+
+include_once "layout/footer.php";
+
 ?>

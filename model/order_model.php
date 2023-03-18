@@ -8,8 +8,8 @@ public function getorder(){
             $this->cont=Database::connection();
             $this->cont->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-            $sql="SELECT orders.id,orders.customer_id as customerid,users.name,orders.total_quantity,orders.total_balance,orders.date
-             from orders join users where orders.customer_id = users.id";
+            $sql="SELECT orders.id,orders.customer_id as customerid,users.name,orders.total_quantity,orders.total_balance, orders.promotion_amount, orders.bill, orders.date
+             from orders join users where orders.customer_id = users.id order by orders.id DESC";
 
             $statement=$this->cont->prepare($sql);
 
@@ -75,7 +75,7 @@ public function getorder(){
             $this->cont=Database::connection();
             $this->cont->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-            $sql="SELECT orders.id,orders.customer_id as customerid,users.name,orders.total_quantity,orders.total_balance,orders.date
+            $sql="SELECT orders.id,orders.customer_id as customerid,users.name,orders.total_quantity,orders.total_balance, orders.promotion_amount, orders.bill, orders.date
              from orders join users where orders.customer_id = users.id and DATE(orders.date)>='$start_date' and DATE(orders.date)<='$end_date'" ;
 
             $statement=$this->cont->prepare($sql);
@@ -142,10 +142,10 @@ public function getorder(){
         {
             $this->cont=Database::connection();
             $this->cont->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-            $sql="SELECT COUNT(order_details.qty) as count , products.name as product_name
-                    FROM order_details JOIN products JOIN categories JOIN orders
-                    WHERE order_details.product_id=products.id AND order_details.order_id=orders.id AND YEAR(date)='$year'
-                    GROUP BY product_id";
+            $sql="SELECT COUNT(order_details.qty) as count , categories.name as product_name
+            FROM order_details JOIN products JOIN categories JOIN orders
+            WHERE order_details.product_id=products.id AND products.category_id=categories.id  AND order_details.order_id=orders.id AND YEAR(date)='$year'
+            GROUP BY categories.id";
             $statement=$this->cont->prepare($sql);
             $statement->execute();
             $customers=$statement->fetchAll(PDO::FETCH_ASSOC);

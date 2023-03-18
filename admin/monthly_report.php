@@ -49,16 +49,17 @@ if(isset($_POST['restart'])){
 
             <form action="" method="post">
                 <div class="row mb-3">
-                <div class="col-md-3">
+                    <div class="col-md-3">
                         <select class="form-control" aria-label="Default select example" name="year" id='select'>
-                            <option value="0">Choose Year</option>
+                            <option value="0" selected hidden>Choose Year</option>
                             <?php
                             for ($i = 0; $i < count($years); $i++) {
                                 //echo "<option value = '".$years[$i]['year']."'>".$years[$i]['year']."</option>";
                             ?>
-                                <option value='<?php echo $years[$i]['year']; ?>' <?php echo (isset($_POST['year']) && $_POST['year'] == $years[$i]['year']) ? 'selected'
-                                                                                        : ''; ?>><?php echo $years[$i]['year']; ?>
-                                </option>
+                            <option value='<?php echo $years[$i]['year']; ?>' <?php echo (isset($_POST['year']) && $_POST['year'] == $years[$i]['year']) ? 'selected'
+                                                                                        : ''; ?>>
+                                <?php echo $years[$i]['year']; ?>
+                            </option>
                             <?php
                             }
 
@@ -67,7 +68,7 @@ if(isset($_POST['restart'])){
                     </div>
                     <div class="col-md-3">
                         <select class="form-control" aria-label="Default select example" name="month" id='select'>
-                            <option value="0">Choose Month</option>
+                            <option value="0" selected hidden>Choose Month</option>
                             <option value="1" <?php echo (isset($month) && $month == 1)? 'selected' : ''; ?>>Jan
                             </option>
                             <option value="2" <?php echo (isset($month) && $month == 2)? 'selected' : ''; ?>>Feb
@@ -95,7 +96,8 @@ if(isset($_POST['restart'])){
                         </select>
                     </div>
                     <div class="col-md-3">
-                        <button class="btn btn-success" name="confirm" type="submit"><i class="fa fa-paper-plane"></i>Confirm</button>
+                        <button class="btn btn-success" name="confirm" type="submit"><i
+                                class="fa fa-paper-plane"></i>Confirm</button>
                         <button class="btn btn-danger" name="restart">Restart</button>
                         <a class="btn btn-secondary" href="reports.php">Back</a>
                     </div>

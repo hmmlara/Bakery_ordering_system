@@ -94,24 +94,24 @@ if(isset($_POST['add_cream'])){
                                                             <div class="form-group">
                                                                 <label for="recipient-name" class="col-form-label">Enter
                                                                     Cream Name:</label>
-                                                                <input type="text" class="form-control" id="recipient-name"
-                                                                    name="cream_name">
+                                                                <input type="text" class="form-control"
+                                                                    id="recipient-name" name="cream_name" required>
                                                                 <label for="recipient-name" class="col-form-label">Enter
                                                                     Cream Color:</label>
-                                                                <input type="text" class="form-control" id="recipient-name"
-                                                                    name="cream_color">
+                                                                <input type="text" class="form-control"
+                                                                    id="recipient-name" name="cream_color" required>
                                                                 <label for="recipient-name" class="col-form-label">Enter
                                                                     Cream Scent:</label>
-                                                                <input type="text" class="form-control" id="recipient-name"
-                                                                    name="cream_scent">
+                                                                <input type="text" class="form-control"
+                                                                    id="recipient-name" name="cream_scent" required>
                                                                 <label for="recipient-name" class="col-form-label">Enter
                                                                     Cream taste:</label>
-                                                                <input type="text" class="form-control" id="recipient-name"
-                                                                    name="cream_taste">
+                                                                <input type="text" class="form-control"
+                                                                    id="recipient-name" name="cream_taste" required>
                                                                 <label for="recipient-name" class="col-form-label">Enter
                                                                     Cream Price:</label>
-                                                                <input type="text" class="form-control" id="recipient-name"
-                                                                    name="cream_price">
+                                                                <input type="number" class="form-control"
+                                                                    id="recipient-name" name="cream_price" required>
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-outline-secondary"
@@ -147,7 +147,7 @@ if(isset($_POST['add_cream'])){
                     </div>
                 </div>
 
-                
+
             </div>
 
         </div>

@@ -77,11 +77,11 @@ if(isset($_POST['add_doll'])){
                                                                 <label for="recipient-name" class="col-form-label">Enter
                                                                     Toy's name:</label>
                                                                 <input type="text" class="form-control"
-                                                                    id="recipient-name" name="doll_name">
+                                                                    id="recipient-name" name="doll_name" required>
                                                                 <label for="recipient-name" class="col-form-label">Enter
                                                                     Toy's price:</label>
                                                                 <input type="text" class="form-control"
-                                                                    id="recipient-name" name="doll_price">
+                                                                    id="recipient-name" name="doll_price" required>
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-outline-secondary"

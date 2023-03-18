@@ -66,7 +66,7 @@ ob_start();
 
                             <?php 
                             
-                            echo "<option value='0'>Choose Category</option>";
+                            echo "<option value='0' selected hidden>Choose Category</option>";
                                 for($i = 0; $i < count($cat_name); $i++){
 
                                     ?>
@@ -91,7 +91,8 @@ ob_start();
                     </div>
 
                     <div class="col-md-5 text-center">
-                        <button class="btn btn-success mx-2" name="confirm"><i class="fa fa-paper-plane"></i>Confirm</button>
+                        <button class="btn btn-success mx-2" name="confirm"><i
+                                class="fa fa-paper-plane"></i>Confirm</button>
                         <button class="btn btn-danger" name="restart">Restart</button>
                         <a href="monthly_report.php" class="btn btn-primary">Monthly Report</a>
                     </div>

@@ -30,6 +30,7 @@
     }
 
 
+
     public function checkUserAndPassword($email)
     {
         $this->pdo=Database::connection();//get connection
@@ -104,6 +105,42 @@
         $statement = $this->pdo->prepare($sql);
         $statement->execute();
         $result = $statement->fetch(pdo::FETCH_ASSOC)['session_id'];
+        return $result;
+    }
+
+    public function updateProfile($id,$name,$phone,$address,$email)
+    {
+      $this->pdo=Database::connection();
+      // var_dump($this->pdo);
+      $this->pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+      $sql="update users set name=:name, phone=:phone, address=:address, email=:email where id=$id)";//write sql
+
+    $statement=$this->pdo->prepare($sql);//prepare sql
+
+        $statement->bindParam(":name",$name);
+        $statement->bindParam(":phone",$phone);
+        $statement->bindParam(":address",$address);
+        $statement->bindParam(":email",$email);
+        //$statement->execute();//execute statment
+
+        if($statement->execute())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public function getUserForUpdate($id)
+    {
+        $this->pdo = Database::connection();
+        $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $sql = "select * from users where id=$id";
+        $statement = $this->pdo->prepare($sql);
+        $statement->execute();
+        $result = $statement->fetch(pdo::FETCH_ASSOC);
         return $result;
     }
 

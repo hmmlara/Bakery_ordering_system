@@ -47,10 +47,10 @@ $promotions = $promotionController->Promotions();
                         </tr>
                     </thead>
                     <tbody id='delete_promotions'>
-                    <?php
+                        <?php
                     for ($row = 0; $row < count($promotions); $row++) {
                         echo '<tr>';
-                        echo "<td>". 1+$row ."</td>";
+                        echo "<td>". ($row + 1) ."</td>";
                         echo '<td>' . $promotions[$row]['name'] . '</td>';
                         echo '<td>' . $promotions[$row]['start_date'] . '</td>';
                         echo '<td>' . $promotions[$row]['end_date'] . '</td>';

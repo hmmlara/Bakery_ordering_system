@@ -77,22 +77,24 @@ else{
 
 ?>
 
-   <!-- Page Heading -->
-                   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-600 ml-4">Add Products</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-light shadow-sm"><i
-                                class="fas fa-download fa-sm text-light-50"></i> Generate Report</a>
-                    </div>
-                   
-            <div class="container">
-            <div>
-                    <a  href="products.php" class="btn btn-outline-secondary">Back</a>
-                   </div>
-                 <form action="" method="post" enctype="multipart/form-data" >
-                        <div class="col-md-8">
-                            <label for="" class="form-label">Categories Name</label>
-                            <select name="category_id" id="" class="form-control">
-                                <?php
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-600 ml-4">Add Products</h1>
+    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-light shadow-sm"><i
+            class="fas fa-download fa-sm text-light-50"></i> Generate Report</a>
+</div>
+
+<div class="container">
+    <div>
+        <a href="products.php" class="btn btn-outline-secondary">Back</a>
+    </div>
+    <form action="" method="post" enctype="multipart/form-data">
+        <img src="uploads/<?php echo $result[0]['image'] ?>" alt="" srcset="" height="100" id="img">
+
+        <div class="col-md-8">
+            <label for="" class="form-label">Categories Name</label>
+            <select name="category_id" id="" class="form-control" required>
+                <?php
                                    for($index=0;$index<count($categorires);$index++)
                                    {
                                     if($categorires[$index]['id']==$result[0]['category_id'])
@@ -105,29 +107,30 @@ else{
                                     }
                                    }
                                 ?>
-                            </select>
+            </select>
 
-                            <label for="" class="form-label">Name</label>
-                            <input type="text" name="name" id="" class="form-control"  value="<?php echo $result[0]['name'];?>">
+            <label for="" class="form-label">Name</label>
+            <input type="text" name="name" id="" class="form-control" value="<?php echo $result[0]['name'];?>" required>
 
-                            <img src="uploads/<?php echo $result[0]['image'] ?>" alt="" srcset="" height="100" id="img" >
-                            <label for="photo" class="form-label">Image</label>
-                            <input type="file" name="photo" id="photo" class="form-control" onchange="file_changed()" >
-                         
+            <label for="photo" class="form-label">Image</label>
+            <input type="file" name="photo" id="photo" class="form-control" onchange="file_changed()">
 
-                            <label for="" class="form-label">Price</label>
-                            <input type="text" name="price" id="" class="form-control" value="<?php  echo $result[0]['price']; ?>">
 
-                            <label for="" class="form-label">Description</label>
-                            <input type="text" name="description" id="" class="form-control" value="<?php  echo $result[0]['description']; ?>">
-                            
-                            <div>
-                                <button type="submit" class="btn btn-outline-success mb-3 mt-3" name="update">Update</button>
-                            </div>
-                        </div>
+            <label for="" class="form-label">Price</label>
+            <input type="number" name="price" id="" class="form-control" value="<?php  echo $result[0]['price']; ?>"
+                required>
 
-                    </form>
+            <label for="" class="form-label">Description</label>
+            <input type="text" name="description" id="" class="form-control"
+                value="<?php  echo $result[0]['description']; ?>" required>
+
+            <div>
+                <button type="submit" class="btn btn-outline-success mb-3 mt-3" name="update">Update</button>
             </div>
+        </div>
+
+    </form>
+</div>
 <?php
  include_once "layout/footer.php";
 ?>

@@ -48,7 +48,7 @@ $result=$productsController->getProductForShow();
                       for($index=0;$index<count($result);$index++)
                       {
                         echo "<tr>";
-                        echo "<td>" . $index +1 ."</td>";
+                        echo "<td>" . ($index +1) ."</td>";
                         echo "<td>".$result[$index]['category_name']."</td>";
                         echo "<td>".$result[$index]['name']."</td>";
                         echo "<td><img src='uploads/".$result[$index]['image']."' height='100px' width='100px'></td>";

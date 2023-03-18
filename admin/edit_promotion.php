@@ -57,22 +57,22 @@ if (isset($_POST['update'])) {
                         <div class="mt-3">
                             <label for="name" class="form-label">Name</label>
                             <input type="text" name="name" id="name" class="form-control"
-                                value="<?php echo $promotion['name']; ?>">
+                                value="<?php echo $promotion['name']; ?>" required>
                         </div>
                         <div class="mt-3">
                             <label for="percentage" class="form-label">Percentage</label>
-                            <input type="text" name="percentage" id="percentage" class="form-control"
-                                value="<?php echo $promotion['percentage']; ?>">
+                            <input type="number" name="percentage" id="percentage" class="form-control"
+                                value="<?php echo $promotion['percentage']; ?>" required>
                         </div>
                         <div class="mt-3">
                             <label for="start_date" class="form-label">Start Date</label>
                             <input type="date" name="start_date" id="start_date" class="form-control"
-                                value="<?php echo $promotion['start_date']; ?>">
+                                value="<?php echo $promotion['start_date']; ?>" required>
                         </div>
                         <div class="mt-3">
                             <label for="end_date" class="form-label">End Date</label>
                             <input type="date" name="end_date" id="end_date" class="form-control"
-                                value="<?php echo $promotion['end_date']; ?>">
+                                value="<?php echo $promotion['end_date']; ?>" required>
                         </div>
                         <div class="mt-3">
                             <button class="btn btn-primary" type="submit" name="update">Update</button>

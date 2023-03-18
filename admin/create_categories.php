@@ -26,33 +26,33 @@ if(isset($_POST['submit']))
 }
 
 ?>
-  
-                  <!-- Begin Page Content -->
-         <div class="container-fluid">
-  
-                      <!-- Page Heading -->
-                      <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                          <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                          <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                  class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                      </div>
-                 <!-- Start PHP -->
-                 <div>
-                  <a href="categories.php" class="btn btn-primary">Back</a>
-                 </div>
-               <div class="container">
 
-            <form action="" method="post">
-                   <div>
-                    <label for="" class="form-label">Name</label>
-                    <input type="text" name="name" id="" class="form-control">
-                   </div>
-                 <div>
-                    <button type="submit" name="add" class="btn btn-success mt-4">Add</button>
-                </div>
-            </form>
-         </div>
-              </div>
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+    </div>
+    <!-- Start PHP -->
+    <div>
+        <a href="categories.php" class="btn btn-primary">Back</a>
+    </div>
+    <div class="container">
+
+        <form action="" method="post">
+            <div>
+                <label for="" class="form-label">Name</label>
+                <input type="text" name="name" id="" class="form-control" required>
+            </div>
+            <div>
+                <button type="submit" name="add" class="btn btn-success mt-4">Add</button>
+            </div>
+        </form>
+    </div>
+</div>
 
 
 <?php
